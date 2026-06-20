@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Instructions - STMU</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg, #001f3f, #003366, #00509e, #0074D9);
+    overflow:hidden;
+}
+
+/* Floating shapes */
+body::before{
+    content:'';
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    top:-180px;
+    left:-120px;
+    animation:float 8s infinite ease-in-out;
+}
+
+body::after{
+    content:'';
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(255,255,255,0.06);
+    border-radius:50%;
+    bottom:-150px;
+    right:-120px;
+    animation:float 10s infinite ease-in-out;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(30px);}
+    100%{transform:translateY(0px);}
+}
+
+/* Container */
+.container{
+    width:520px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+    animation:fadeIn 1s ease;
+    color:white;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Header */
+.logo{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+h2{
+    text-align:center;
+    font-size:26px;
+    margin-bottom:5px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:14px;
+    color:#dbeafe;
+    margin-bottom:25px;
+}
+
+/* Instructions */
+ul{
+    list-style:none;
+    padding:0;
+}
+
+ul li{
+    background:rgba(255,255,255,0.12);
+    margin:10px 0;
+    padding:12px 15px;
+    border-radius:10px;
+    font-size:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+ul li i{
+    color:#ffffff;
+}
+
+/* Button */
+.btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    margin-top:25px;
+    background:white;
+    color:#003366;
+    text-decoration:none;
+    padding:14px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    margin-top:20px;
+    font-size:12px;
+    color:#e5e7eb;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <i class="fas fa-clipboard-list"></i>
+    </div>
+
+    <h2>Admission Test Instructions</h2>
+    <p class="subtitle">BS Software Engineering - Fall 2026</p>
+
+    <ul>
+        <li><i class="fas fa-question-circle"></i> Total Questions: 50</li>
+        <li><i class="fas fa-star"></i> Total Marks: 50</li>
+        <li><i class="fas fa-clock"></i> Time Duration: 50 Minutes</li>
+        <li><i class="fas fa-ban"></i> No Negative Marking</li>
+        <li><i class="fas fa-user-check"></i> Only one attempt is allowed</li>
+    </ul>
+
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfRv5fkv5J2emauXkfJ8SnrnSCXCFDVbCTyhcjAVIXztnSH1Q/viewform?usp=header" target="_blank">
+        Start Test
+    </a>
+
+    <div class="footer">
+        Shifa Tameer-e-Millat University<br>
+        Park Road Campus, Islamabad
+    </div>
+
+</div>
+
+</body>
+</html>

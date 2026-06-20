@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BS Software Engineering Admission Test</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg, #001f3f, #003366, #00509e, #0074D9);
+    overflow:hidden;
+}
+
+/* Floating circles */
+body::before{
+    content:'';
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    top:-180px;
+    left:-120px;
+    animation:float 8s infinite ease-in-out;
+}
+
+body::after{
+    content:'';
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(255,255,255,0.06);
+    border-radius:50%;
+    bottom:-150px;
+    right:-120px;
+    animation:float 10s infinite ease-in-out;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(30px);}
+    100%{transform:translateY(0px);}
+}
+
+/* Container */
+.container{
+    width:600px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    padding:45px;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+    text-align:center;
+    color:white;
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Icon */
+.logo{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+/* Headings */
+h1{
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+h2{
+    font-size:22px;
+    color:#dbeafe;
+}
+
+h3{
+    font-size:18px;
+    margin-top:5px;
+    color:#e0f2fe;
+}
+
+/* Paragraph */
+p{
+    margin-top:15px;
+    font-size:15px;
+    color:#f1f5f9;
+    line-height:1.6;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:white;
+    color:#003366;
+    padding:14px 30px;
+    text-decoration:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.footer{
+    margin-top:25px;
+    font-size:12px;
+    color:#e5e7eb;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <i class="fas fa-graduation-cap"></i>
+    </div>
+
+    <h1>Shifa Tameer-e-Millat University</h1>
+    <h2>BS Software Engineering</h2>
+    <h3>Fall 2026 Admission Assessment Test</h3>
+
+    <p>
+        Welcome to the official admission assessment portal of the Software Engineering Department.  
+        Please ensure you read all instructions carefully before starting the test.
+    </p>
+
+    <p>
+        Login using your <b>Username</b> and <b>Password</b> to proceed.
+    </p>
+
+    <a href="login.html" class="btn">
+        <i class="fas fa-right-to-bracket"></i> Login
+    </a>
+
+    <div class="footer">
+        Shifa Tameer-e-Millat University<br>
+        Park Road Campus, Islamabad
+    </div>
+
+</div>
+
+</body>
+</html>
